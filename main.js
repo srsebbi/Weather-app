@@ -5,7 +5,7 @@ function NewSearch(city) {
   const name = city.name;
   const temp = city.main.temp;
   const kelvinToCelsius = (temperature) => {
-    return temperature - 273.15;
+    return (temperature - 273.15).toFixed(2);
   };
   const celsiusToFahrenheit = (temperature) => {
     return (temperature * (9 / 5) + 32).toFixed(2);
