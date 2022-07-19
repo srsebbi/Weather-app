@@ -7,19 +7,31 @@
     <title>Weather App</title>
   </head>
   <body>
-    <header>
-      <h1>Weather App</h1>
-    </header>
     <main>
+      <header>
+        <h1>Weather App</h1>
+      </header>
       <form action="#" id="form">
-        <label for="search">search</label>
-        <input type="text" name="search" id="search" />
+        <label for="search"></label>
+        <input
+          type="text"
+          name="search"
+          id="search"
+          placeholder="Enter a city"
+        />
         <button id="search_btn">Search</button>
       </form>
-      <article class="data_container">
+      <article class="city_container">
         <h1 class="city_name">City Name</h1>
-        <span class="temperature">Temperature</span>
+        <span class="city_temp">Temperature</span>
+        <button id="change_unit">Temp in Fahrenheit</button>
       </article>
+      <footer>
+        <a href="https://github.com/srsebbi">
+          <img src="./img/github-logo.svg" alt="github-logo" />
+          Copyright © 2022 srsebbi
+        </a>
+      </footer>
     </main>
     <script type="module" src="/main.js"></script>
   </body>
