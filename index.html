@@ -4,10 +4,23 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
+    <title>Weather App</title>
   </head>
   <body>
-    <div id="app"></div>
+    <header>
+      <h1>Weather App</h1>
+    </header>
+    <main>
+      <form action="#" id="form">
+        <label for="search">search</label>
+        <input type="text" name="search" id="search" />
+        <button id="search_btn">Search</button>
+      </form>
+      <article class="data_container">
+        <h1 class="city_name">City Name</h1>
+        <span class="temp">Temperature</span>
+      </article>
+    </main>
     <script type="module" src="/main.js"></script>
   </body>
 </html>
