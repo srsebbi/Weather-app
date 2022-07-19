@@ -6,21 +6,25 @@ const form = document.querySelector('#form');
 search_btn.addEventListener('click', async (e) => {
   e.preventDefault();
   const city = await searchLocation();
-  console.log(city);
-  console.log(city.name);
+  displayData(city);
   // form.reset();
 });
 
-function CityData(json) {
-  const cityName = json.name;
-  const temperature = json.main.temp;
+function kelvinToCelsius(temperature) {
+  return temperature - 273.15;
+}
+
+function kelvinToFahrenheit(temperature) {
+  return (temperature - 273.15) * (9 / 5) + 32;
 }
 
 function displayData(json) {
   const cityName = document.createElement('h1');
   cityName.textContent = `The city is: ${json.name}`;
   const temp = document.createElement('h2');
-  temp.textContent = `Temperature: ${json.main.temp}`;
+  temp.textContent = `Temperature: ${kelvinToCelsius(json.main.temp).toFixed(
+    2,
+  )} °C`;
   document.body.append(cityName);
   document.body.append(temp);
 }
